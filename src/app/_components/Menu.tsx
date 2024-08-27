@@ -1,5 +1,5 @@
 import { role } from "@/lib/fakeData";
-import { CalendarFold, House, LogOut, MessageCircleMore, Settings, User, Volume2 } from "lucide-react";
+import { BriefcaseMedical, CalendarFold, House, LogOut, MessageCircleMore, Settings, SquareChartGantt, TestTubeDiagonal, User, Volume2 } from "lucide-react";
 import Link from "next/link";
 
 const menuItems = [
@@ -10,25 +10,43 @@ const menuItems = [
         icon: <House/>,
         label: "Accueil",
         href: "/",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "manager", "biologist", "technician"],
+      },
+      {
+        icon: <SquareChartGantt />,
+        label: "Cadre",
+        href: "/list/managers",
+        visible: ["admin", "manager"],
+      },
+      {
+        icon: <BriefcaseMedical />,
+        label: "Biologiste",
+        href: "/list/biologists",
+        visible: ["admin", "manager"],
+      },
+      {
+        icon: <TestTubeDiagonal />,
+        label: "Technicien",
+        href: "/list/technicians",
+        visible: ["admin", "manager"],
       },
       {
         icon: <CalendarFold />,
         label: "Evenements",
         href: "/list/events",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "manager", "biologist", "technician"],
       },
       {
         icon: <MessageCircleMore />,
         label: "Messages",
         href: "/list/messages",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "manager", "biologist", "technician"],
       },
       {
         icon: <Volume2 />,
         label: "Annonces",
         href: "/list/announcements",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "manager", "biologist", "technician"],
       },
     ],
   },
@@ -39,19 +57,19 @@ const menuItems = [
         icon: <User/>,
         label: "Profil",
         href: "/profile",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "manager", "biologist", "technician"],
       },
       {
         icon: <Settings/>,
         label: "Paramêtres",
         href: "/settings",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "manager", "biologist", "technician"],
       },
       {
         icon: <LogOut />,
         label: "Se déconnecter",
         href: "/logout",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "manager", "biologist", "technician"],
       },
     ],
   },

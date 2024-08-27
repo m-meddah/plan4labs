@@ -1,3 +1,4 @@
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
 import { MessageCircleMore, Volume2 } from "lucide-react";
 
@@ -14,6 +15,10 @@ const Navbar = () => {
         <h3 className="scroll-m-20 text-md font-semibold tracking-tight">Madjid Meddah</h3>
         <p className="text-sm text-muted-foreground">Admin</p>
         </div>
+        <Avatar>
+          <AvatarImage src="https://avatars.githubusercontent.com/u/77695390?v=4"/>
+          <AvatarFallback>MM</AvatarFallback>
+        </Avatar>
       </div>
     </div>
   )
