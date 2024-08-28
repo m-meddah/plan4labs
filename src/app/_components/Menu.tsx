@@ -1,5 +1,5 @@
 import { role } from "@/lib/fakeData";
-import { BriefcaseMedical, CalendarFold, House, LogOut, MessageCircleMore, Settings, SquareChartGantt, TestTubeDiagonal, User, Volume2 } from "lucide-react";
+import { BriefcaseMedical, CalendarFold, House, LogIn, LogOut, MessageCircleMore, Settings, SquareChartGantt, TestTubeDiagonal, User, Volume2 } from "lucide-react";
 import Link from "next/link";
 
 const menuItems = [
@@ -10,7 +10,7 @@ const menuItems = [
         icon: <House/>,
         label: "Accueil",
         href: "/",
-        visible: ["admin", "manager", "biologist", "technician"],
+        visible: ["admin", "manager", "biologist", "technician", "visitor"],
       },
       {
         icon: <SquareChartGantt />,
@@ -64,6 +64,12 @@ const menuItems = [
         label: "Paramêtres",
         href: "/settings",
         visible: ["admin", "manager", "biologist", "technician"],
+      },
+      {
+        icon: <LogIn />,
+        label: "Se connecter",
+        href: "/login",
+        visible: ["visitor"],
       },
       {
         icon: <LogOut />,
