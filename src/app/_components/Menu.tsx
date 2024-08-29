@@ -1,5 +1,5 @@
 import { role } from "@/lib/fakeData";
-import { BriefcaseMedical, CalendarFold, House, LogIn, LogOut, MessageCircleMore, Settings, SquareChartGantt, TestTubeDiagonal, User, Volume2 } from "lucide-react";
+import { BriefcaseMedical, CalendarFold, House, LogIn, LogOut, MessageCircleMore, Settings, Shield, SquareChartGantt, TestTubeDiagonal, User, Volume2 } from "lucide-react";
 import Link from "next/link";
 
 const menuItems = [
@@ -7,10 +7,16 @@ const menuItems = [
     title: "MENU",
     items: [
       {
-        icon: <House/>,
+        icon: <House />,
         label: "Accueil",
         href: "/",
         visible: ["admin", "manager", "biologist", "technician", "visitor"],
+      },
+      {
+        icon: <Shield />,
+        label: "Admin",
+        href: "/admin",
+        visible: ["admin", "manager"],
       },
       {
         icon: <SquareChartGantt />,
@@ -54,14 +60,14 @@ const menuItems = [
     title: "OTHER",
     items: [
       {
-        icon: <User/>,
+        icon: <User />,
         label: "Profil",
         href: "/profile",
         visible: ["admin", "manager", "biologist", "technician"],
       },
       {
-        icon: <Settings/>,
-        label: "Paramêtres",
+        icon: <Settings />,
+        label: "Paramètres",
         href: "/settings",
         visible: ["admin", "manager", "biologist", "technician"],
       },
@@ -95,7 +101,7 @@ const Menu = () => {
                 <Link
                   href={item.href}
                   key={item.label}
-                  className="flex items-center justify-center lg:justify-start gap-4 text-gray-500 py-2 md:px-2 rounded-md hover:bg-lamaSkyLight"
+                  className="flex items-center justify-center lg:justify-start gap-4 text-gray-500 py-2 md:px-2 rounded-md hover:bg-accent"
                 >
                   {item.icon}
                   <span className="hidden lg:block">{item.label}</span>
